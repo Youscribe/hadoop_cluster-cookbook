@@ -2,17 +2,18 @@ maintainer       "Philip (flip) Kromer - Infochimps, Inc"
 maintainer_email "coders@infochimps.com"
 license          "Apache 2.0"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "3.0.5"
+version          "3.0.6"
 
 description      "Hadoop: distributed massive-scale data processing framework. Store and analyze terabyte-scale datasets with ease"
 
 depends          "java"
 depends          "apt"
 depends          "runit"
-depends          "volumes"
-depends          "tuning"
-depends          "metachef"
-depends          "dashpot"
+
+suggests         "volumes"
+suggests         "tuning"
+suggests         "metachef"
+suggests         "dashpot"
 
 recipe           "hadoop_cluster::default",            "Base configuration for hadoop_cluster"
 recipe           "hadoop_cluster::add_cloudera_repo",  "Add Cloudera repo to package manager"
